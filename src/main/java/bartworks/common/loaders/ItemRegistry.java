@@ -19,6 +19,7 @@ import static gregtech.api.enums.MetaTileEntityIDs.AcidGeneratorLV;
 import static gregtech.api.enums.MetaTileEntityIDs.AcidGeneratorMV;
 import static gregtech.api.enums.MetaTileEntityIDs.CircuitAssemblyLine;
 import static gregtech.api.enums.MetaTileEntityIDs.CompressedFluidHatch;
+import static gregtech.api.enums.MetaTileEntityIDs.DeepEarthCoolingPump;
 import static gregtech.api.enums.MetaTileEntityIDs.DeepEarthHeatingPump;
 import static gregtech.api.enums.MetaTileEntityIDs.Diode12A_EV;
 import static gregtech.api.enums.MetaTileEntityIDs.Diode12A_HV;
@@ -199,6 +200,7 @@ import bartworks.common.tileentities.classic.TileEntityHeatedWaterPump;
 import bartworks.common.tileentities.classic.TileEntityRotorBlock;
 import bartworks.common.tileentities.debug.MTECreativeScanner;
 import bartworks.common.tileentities.multis.MTECircuitAssemblyLine;
+import bartworks.common.tileentities.multis.MTEDeepEarthCoolingPump;
 import bartworks.common.tileentities.multis.MTEDeepEarthHeatingPump;
 import bartworks.common.tileentities.multis.MTEElectricImplosionCompressor;
 import bartworks.common.tileentities.multis.MTEHighTempGasCooledReactor;
@@ -376,6 +378,7 @@ public class ItemRegistry {
     public static ItemStack[] acidGens = new ItemStack[3];
     public static ItemStack acidGensLV;
     public static ItemStack[] megaMachines = new ItemStack[5];
+    public static ItemStack decp;
     public static ItemStack dehp;
     public static ItemStack[] voidminer = new ItemStack[3];
     public static ItemStack THTR;
@@ -535,6 +538,8 @@ public class ItemRegistry {
             StatCollector.translateToLocal("tile.acidgenerator.name") + " " + GTValues.VN[1],
             +1).getStackForm(1L);
 
+        ItemRegistry.decp = new MTEDeepEarthCoolingPump(DeepEarthCoolingPump.ID, 1, "DECP", "Deep Earth Cooling Pump")
+            .getStackForm(1L);
         ItemRegistry.dehp = new MTEDeepEarthHeatingPump(DeepEarthHeatingPump.ID, 1, "DEHP", "Deep Earth Heating Pump")
             .getStackForm(1L);
         ItemRegistry.megaMachines[0] = new MTEMegaBlastFurnace(
