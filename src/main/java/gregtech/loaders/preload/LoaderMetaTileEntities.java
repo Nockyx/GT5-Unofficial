@@ -1071,6 +1071,7 @@ import gregtech.common.tileentities.machines.multi.MTEPCBFactory;
 import gregtech.common.tileentities.machines.multi.MTEPlasmaForge;
 import gregtech.common.tileentities.machines.multi.MTEProcessingArray;
 import gregtech.common.tileentities.machines.multi.MTEPyrolyseOven;
+import gregtech.common.tileentities.machines.multi.MTESpatialAnomalyContainmentChamber;
 import gregtech.common.tileentities.machines.multi.MTETranscendentPlasmaMixer;
 import gregtech.common.tileentities.machines.multi.MTEVacuumFreezer;
 import gregtech.common.tileentities.machines.multi.MTEWormholeGenerator;
@@ -1630,6 +1631,12 @@ public class LoaderMetaTileEntities implements Runnable { // TODO CHECK CIRCUIT 
         ItemList.LargeFluidExtractor.set(
             new MTELargeFluidExtractor(LARGE_FLUID_EXTRACTOR.ID, "multimachine.fluidextractor", "Large Fluid Extractor")
                 .getStackForm(1));
+
+        ItemList.SpatialAnomalyContainmentChamber.set(
+            new MTESpatialAnomalyContainmentChamber(
+                SPATIAL_ANOMALY_CONTAINMENT_CHAMBER.ID,
+                "multimachine.containmentchamber",
+                "Spatial Anomaly Containment Chamber").getStackForm(1));
     }
 
     private static void registerSteamMachines() {
